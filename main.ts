@@ -20,7 +20,7 @@ function game2 () {
         . . . f f f f f f f f f 2 . . . 
         . . . . . f f . . f f . 2 . . . 
         `, SpriteKind.Enemy)
-    Render.move(villain, 30)
+    Render.move(villain, 60)
     villain.follow(mySprite)
     tiles.placeOnRandomTile(villain, sprites.dungeon.floorDarkDiamond)
     scene.setBackgroundImage(img`
@@ -148,7 +148,7 @@ function game2 () {
     tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
     mySprite = Render.getRenderSpriteVariable()
     Render.moveWithController(2, 3, 1)
-    Render.move(mySprite, 60)
+    Render.move(mySprite, 100)
     crosshair = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
