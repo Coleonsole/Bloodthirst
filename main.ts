@@ -41,7 +41,7 @@ function game2 () {
         . . . . . f f . . f f . 2 . . . 
         `, SpriteKind.Enemy)
     Render.move(villain, 60)
-    villain.follow(Render.getRenderSpriteInstance())
+    villain.follow(Render.getRenderSpriteInstance(), 30)
     tiles.placeOnRandomTile(villain, sprites.dungeon.floorDarkDiamond)
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
