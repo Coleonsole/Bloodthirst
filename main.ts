@@ -21,7 +21,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 function game2 () {
     game.splash("Bloodthirst")
     game.splash("A Coleonsole original")
-    tiles.setCurrentTilemap(tilemap`level2`)
+    tiles.setCurrentTilemap(tilemap`level1`)
     villain = sprites.create(img`
         . . . . . . 5 . 5 . . . . . . . 
         . . . . . f 5 5 5 f f . . . . . 
@@ -168,7 +168,7 @@ function game2 () {
     tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
     mySprite = Render.getRenderSpriteVariable()
     Render.moveWithController(2, 3, 1)
-    Render.move(mySprite, 100)
+    Render.move(mySprite, 120)
     crosshair = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -190,7 +190,7 @@ function game2 () {
     crosshair.setFlag(SpriteFlag.RelativeToCamera, true)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    music.play(music.createSong(hex`0078000408020400001c00010a006400f4016400000400000000000000000000000000050000041100000004000c191b1d1e2022242527292a2c01001c000f05001202c102c201000405002800000064002800031400060200041100000004000c191b1d1e2022242527292a2c02001c000c960064006d019001000478002c010000640032000000000a0600051100000004000c191b1d1e2022242527292a2c03001c0001dc00690000045e01000400000000000000000000056400010400030d000000040008191b1e242527292c`), music.PlaybackMode.UntilDone)
+    music.play(music.createSong(hex`0078000408020400001c00010a006400f4016400000400000000000000000000000000050000041100000004000c191b1d1e2022242527292a2c01001c000f05001202c102c201000405002800000064002800031400060200041100000004000c191b1d1e2022242527292a2c02001c000c960064006d019001000478002c010000640032000000000a0600051100000004000c191b1d1e2022242527292a2c03001c0001dc00690000045e01000400000000000000000000056400010400030d000000040008191b1e242527292c`), music.PlaybackMode.InBackground)
     game.gameOver(false)
     game.setGameOverEffect(false, effects.melt)
 })
