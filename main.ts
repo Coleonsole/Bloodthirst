@@ -1,7 +1,7 @@
 function game2 () {
     game.splash("Bloodthirst")
     game.splash("A Coleonsole original")
-    tiles.setCurrentTilemap(tilemap`level2`)
+    tiles.setCurrentTilemap(tilemap`level1`)
     villain = sprites.create(img`
         . . . . . . 5 . 5 . . . . . . . 
         . . . . . f 5 5 5 f f . . . . . 
@@ -20,8 +20,8 @@ function game2 () {
         . . . f f f f f f f f f 2 . . . 
         . . . . . f f . . f f . 2 . . . 
         `, SpriteKind.Enemy)
-    Render.move(villain, 30)
-    villain.follow(mySprite)
+    Render.move(villain, 60)
+    villain.follow(Render.getRenderSpriteInstance())
     tiles.placeOnRandomTile(villain, sprites.dungeon.floorDarkDiamond)
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
