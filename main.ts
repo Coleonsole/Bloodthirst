@@ -191,6 +191,9 @@ function game2 () {
     Render.move(villain, 30)
     villain.follow(Render.getRenderSpriteInstance(), 30)
 }
+controller.combos.attachCombo("upupdowndownleftrightleftrightba", function () {
+    Render.toggleViewMode()
+})
 function Day_2 () {
     game.splash("The doll is dead...")
     game.splash("You'll never be alone again")
